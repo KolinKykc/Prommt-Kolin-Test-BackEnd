@@ -1,3 +1,5 @@
+Initial instructions:
+
 Please implement a simple Web application that will support the 4 typical CRUD operations (Create, Read, Update and Delete)
 Since Prommt is about online payments, we propose you to implement these 4 APIs
 
@@ -22,13 +24,17 @@ paid_date
 Please provide the instructions to execute the application both for FE and BE.
 
 
+## Rest APIs
 
-{
+The app defines following CRUD APIs.
 
-    "created_date": "2023-01-30T00:00:00.000+00:00",
-    "payer_email": "test2@gmail.com",
-    "status": "unpaid",
-    "currency": "EUR",
-    "amount": 20.0,
-    "paid_date": "2023-01-30T00:00:00.000+00:00"
-}
+```
+GET /payments
+
+POST /payments
+
+GET /payments/{Id}
+
+POST /payments/{Id}
+
+DELETE /payments/{Id}
