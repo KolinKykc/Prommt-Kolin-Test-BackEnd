@@ -1,5 +1,6 @@
 package com.prommt.kolintest.controller;
 
+import com.prommt.kolintest.DTO.PaymentRequestDto;
 import com.prommt.kolintest.model.Payment;
 import com.prommt.kolintest.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class PaymentController {
     PaymentService paymentService;
 
     @PostMapping
-    public ResponseEntity<String> createPayment(@RequestBody Payment payment) {
+    public ResponseEntity<String> createPayment(@RequestBody PaymentRequestDto payment) {
         paymentService.createPayment(payment);
         return new ResponseEntity<>("created", HttpStatus.OK);
     }

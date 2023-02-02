@@ -1,6 +1,7 @@
 package com.prommt.kolintest.model;
 
 
+import com.prommt.kolintest.enumeration.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,7 +25,7 @@ public class Payment {
 
     private Date created_date;
     private String payer_email;
-    private String status;
+    private Status status;
     private String currency;
     private Float amount;
     private Date paid_date;
